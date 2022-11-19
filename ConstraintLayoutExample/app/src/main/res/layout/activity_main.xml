@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/tv_packed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:text="Packed Chaining (Just apply chainStyle in any one view)"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_view_1"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="#4CAF50"
+        android:gravity="center"
+        android:text="A"
+        app:layout_constraintEnd_toStartOf="@+id/tv_view_2"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_packed" />
+
+    <TextView
+        android:id="@+id/tv_view_2"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:background="#CDDC39"
+        android:gravity="center"
+        android:text="B"
+        app:layout_constraintEnd_toStartOf="@+id/tv_view_3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tv_view_1"
+        app:layout_constraintTop_toTopOf="@+id/tv_view_1" />
+
+    <TextView
+        android:id="@+id/tv_view_3"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:background="#00BCD4"
+        android:gravity="center"
+        android:text="C"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tv_view_2"
+        app:layout_constraintTop_toTopOf="@+id/tv_view_2" />
+
+    <TextView
+        android:id="@+id/tv_spread"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:text="Spread Chaining"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_view_1" />
+
+    <TextView
+        android:id="@+id/tv_view_4"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="#4CAF50"
+        android:gravity="center"
+        android:text="A"
+        app:layout_constraintEnd_toStartOf="@+id/tv_view_5"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_spread" />
+
+    <TextView
+        android:id="@+id/tv_view_5"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:background="#CDDC39"
+        android:gravity="center"
+        android:text="B"
+        app:layout_constraintEnd_toStartOf="@+id/tv_view_6"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tv_view_4"
+        app:layout_constraintTop_toTopOf="@+id/tv_view_4" />
+
+
+    <TextView
+        android:id="@+id/tv_view_6"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:background="#00BCD4"
+        android:gravity="center"
+        android:text="C"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tv_view_5"
+        app:layout_constraintTop_toTopOf="@+id/tv_view_5" />
+
+    <TextView
+        android:id="@+id/tv_spread_inside"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:text="Spread Inside Chaining"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_view_4" />
+
+    <TextView
+        android:id="@+id/tv_view_7"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="#4CAF50"
+        android:gravity="center"
+        android:text="A"
+        app:layout_constraintEnd_toStartOf="@+id/tv_view_8"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_spread_inside" />
+
+    <TextView
+        android:id="@+id/tv_view_8"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:background="#CDDC39"
+        android:gravity="center"
+        android:text="B"
+        app:layout_constraintEnd_toStartOf="@+id/tv_view_9"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tv_view_7"
+        app:layout_constraintTop_toTopOf="@+id/tv_view_7" />
+
+    <TextView
+        android:id="@+id/tv_view_9"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:background="#00BCD4"
+        android:gravity="center"
+        android:text="C"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tv_view_8"
+        app:layout_constraintTop_toTopOf="@+id/tv_view_8" />
+
+
+
+
+    <TextView
+        android:id="@+id/tv_weighted"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:text="Spread Weighted Chain"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_view_7" />
+
+    <!--Horizontal weight added to the views. where we set the
+     width of all the views to 0dp and then set the layout_constraintHorizontal_weight
+      from 1 to any number proportionately. It works like LinearLayout Weight. Here we
+      have set the View B weight to 3 and rest of the view weights to 1 for proportionally
+      dividing the views.-->
+
+    <TextView
+        android:id="@+id/tv_view_10"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="#4CAF50"
+        android:gravity="center"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        android:text="A"
+        app:layout_constraintEnd_toStartOf="@+id/tv_view_11"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_weighted" />
+
+    <TextView
+        android:id="@+id/tv_view_11"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#CDDC39"
+        android:gravity="center"
+        app:layout_constraintHorizontal_weight="3"
+        android:text="B"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_view_10"
+        app:layout_constraintEnd_toStartOf="@+id/tv_view_12"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tv_view_10" />
+
+    <TextView
+        android:id="@+id/tv_view_12"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#00BCD4"
+        android:gravity="center"
+        app:layout_constraintHorizontal_weight="1"
+        android:text="C"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_view_11"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tv_view_11" />
+
+    <
+
+</androidx.constraintlayout.widget.ConstraintLayout>
