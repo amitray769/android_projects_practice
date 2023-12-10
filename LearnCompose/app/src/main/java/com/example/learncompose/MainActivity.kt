@@ -18,6 +18,8 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.example.learncompose.ui.textfield.IconRichTextField
+import com.example.learncompose.ui.textfield.TextFieldExample
 import com.example.learncompose.ui.theme.LearnComposeTheme
 import kotlinx.coroutines.delay
 
@@ -28,16 +30,22 @@ class MainActivity : ComponentActivity() {
             LearnComposeTheme {
                 // A surface container using the 'background' color from the theme
                 val value= remember {
-                    mutableStateOf<String>("he000000lo")
+                    mutableStateOf("he000000lo")
                 }
                 for (i in 1..10){
                     value.value = "hello_$i"
             }
-                LaunchEffectExample(value, FakeViewModel())
+                Column(modifier = Modifier.padding(28.dp)) {
+                    IconRichTextField()
+                    Spacer(modifier = Modifier.padding(16.dp))
+                    TextFieldExample()
+                }
             }
         }
     }
 }
+
+
 
 class FakeViewModel(){
     val deeplink = mutableStateOf(false)
