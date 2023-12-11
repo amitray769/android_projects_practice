@@ -1,6 +1,7 @@
 package com.example.learncompose.ui.textfield
 
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.text.KeyboardOptions
@@ -22,6 +23,16 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
+
+@Composable
+fun TextFieldHomeScreen(navController: NavController) {
+    Column(modifier = Modifier.padding(28.dp)) {
+        IconRichTextField()
+        Spacer(modifier = Modifier.padding(16.dp))
+        TextFieldExample()
+    }
+}
 
 @Composable
 fun IconRichTextField() {

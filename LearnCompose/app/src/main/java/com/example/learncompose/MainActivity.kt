@@ -3,42 +3,51 @@ package com.example.learncompose
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.animation.*
-import androidx.compose.animation.core.*
+import androidx.compose.animation.animateColorAsState
+import androidx.compose.animation.core.animateIntAsState
+import androidx.compose.animation.core.tween
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
-import androidx.compose.runtime.*
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.MutableState
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.example.learncompose.ui.textfield.IconRichTextField
-import com.example.learncompose.ui.textfield.TextFieldExample
+import androidx.navigation.NavHostController
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.rememberNavController
+import com.example.learncompose.navigation.NavigationRoute
+import com.example.learncompose.navigation.mainNavGraph
 import com.example.learncompose.ui.theme.LearnComposeTheme
 import kotlinx.coroutines.delay
 
 class MainActivity : ComponentActivity() {
+    private lateinit var navController: NavHostController
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
             LearnComposeTheme {
-                // A surface container using the 'background' color from the theme
-                val value= remember {
-                    mutableStateOf("he000000lo")
-                }
-                for (i in 1..10){
-                    value.value = "hello_$i"
-            }
-                Column(modifier = Modifier.padding(28.dp)) {
-                    IconRichTextField()
-                    Spacer(modifier = Modifier.padding(16.dp))
-                    TextFieldExample()
+                 navController = rememberNavController()
+                 NavHost(
+                    navController = navController,
+                    startDestination = NavigationRoute.HomeRoute.route) {
+                    mainNavGraph(navController)
                 }
             }
         }
