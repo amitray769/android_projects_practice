@@ -9,8 +9,10 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.rememberNavController
+import com.example.learncompose.demotestapp.MainScreen
 import com.example.learncompose.navigation.NavigationRoute
 import com.example.learncompose.navigation.mainNavGraph
+import com.example.learncompose.ui.bottomsheet.BottomSheetWithFAB
 import com.example.learncompose.ui.theme.LearnComposeTheme
 
 class MainActivity : ComponentActivity() {
@@ -20,12 +22,14 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             LearnComposeTheme {
-                 navController = rememberNavController()
-                 NavHost(
+
+             /*    NavHost(
                     navController = navController,
                     startDestination = NavigationRoute.HomeRoute.route) {
                     mainNavGraph(navController)
-                }
+                }*/
+//                MainScreen()
+                BottomSheetWithFAB()
             }
         }
     }
