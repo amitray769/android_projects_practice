@@ -4,8 +4,9 @@ import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.compose.composable
 import androidx.navigation.navigation
+import com.example.learncompose.ui.bottomNavigation.BottomNavigationScreen
+import com.example.learncompose.ui.bottomsheet.BottomSheetScreen
 import com.example.learncompose.ui.home.HomeScreen
-import com.example.learncompose.ui.textfield.TextFieldHomeScreen
 
 fun NavGraphBuilder.mainNavGraph(navController: NavController) {
     navigation(
@@ -17,7 +18,10 @@ fun NavGraphBuilder.mainNavGraph(navController: NavController) {
         }
 
         composable(NavigationRoute.ComponentRoute.route){
-            TextFieldHomeScreen(navController)
+           // TextFieldHomeScreen(navController)
+           // BottomSheetScreen(navController)
+            BottomNavigationScreen()
+
         }
 
     }
