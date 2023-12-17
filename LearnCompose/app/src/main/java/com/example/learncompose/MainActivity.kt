@@ -6,21 +6,37 @@ import androidx.activity.compose.setContent
 import androidx.compose.material3.Text
 import androidx.compose.runtime.*
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.learncompose.ui.LaunchEffectExample
+import androidx.navigation.NavHostController
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.rememberNavController
+import com.example.learncompose.navigation.NavigationRoute
+import com.example.learncompose.navigation.mainNavGraph
 import com.example.learncompose.ui.theme.LearnComposeTheme
 
 class MainActivity : ComponentActivity() {
+    private lateinit var navController: NavHostController
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
             LearnComposeTheme {
-                // A surface container using the 'background' color from the theme
-            
+                 navController = rememberNavController()
+                 NavHost(
+                    navController = navController,
+                    startDestination = NavigationRoute.HomeRoute.route) {
+                    mainNavGraph(navController)
+                }
             }
         }
     }
 }
 
+
+
+
+class FakeViewModel(){
+    val deeplink = mutableStateOf(false)
+}
 
 
 @Composable
