@@ -113,38 +113,5 @@ fun MainScreen(
                 }
             }
         }
-
-
-        //Navigations(navController = navController)
-        /*        Scaffold() { innerPadding ->
-                    Box(modifier = Modifier.background(Color.Green)) {
-
-
-
-
-                        if (showBottomSheet) {
-                            ModalBottomSheet(
-                                onDismissRequest = {
-                                    showBottomSheet = false
-                                },
-                                sheetState = sheetState
-                            ) {
-                                // Sheet content
-                                Button(
-                                    modifier = Modifier.align(Alignment.CenterHorizontally),
-                                    onClick = {
-                                        scope.launch { sheetState.hide() }.invokeOnCompletion {
-                                            if (!sheetState.isVisible) {
-                                                showBottomSheet = false
-                                            }
-                                        }
-                                    }) {
-                                    Text("Hide bottom sheet")
-                                }
-                            }
-                        }
-                    }
-                }*/
-
     }
 }
