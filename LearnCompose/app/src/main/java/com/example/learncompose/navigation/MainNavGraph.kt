@@ -7,6 +7,7 @@ import androidx.navigation.navigation
 import com.example.learncompose.ui.bottomNavigation.BottomNavigationScreen
 import com.example.learncompose.ui.bottomsheet.BottomSheetScreen
 import com.example.learncompose.ui.home.HomeScreen
+import com.example.learncompose.ui.lazy_column.LazyColumnHomeScreen
 import com.example.learncompose.ui.textfield.TextFieldHomeScreen
 
 fun NavGraphBuilder.mainNavGraph(navController: NavController) {
@@ -24,6 +25,10 @@ fun NavGraphBuilder.mainNavGraph(navController: NavController) {
 
         composable(NavigationRoute.ComponentRoute.BottomNavigationRoute.route) {
             BottomNavigationScreen()
+        }
+
+        composable(NavigationRoute.ComponentRoute.LazyColumnRoute.route) {
+            LazyColumnHomeScreen()
         }
 
     }

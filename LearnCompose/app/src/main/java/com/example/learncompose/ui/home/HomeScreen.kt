@@ -25,7 +25,7 @@ fun HomeScreen(navController: NavController) {
         }
 
         LCButton(buttonText = "LazyColumn") {
-            navController.navigate(NavigationRoute.ComponentRoute.route)
+            navController.navigate(NavigationRoute.ComponentRoute.LazyColumnRoute.route)
         }
 
 

@@ -29,8 +29,6 @@ class MainActivity : ComponentActivity() {
                 ) {
                     mainNavGraph(navController)
                 }
-//                MainScreen()
-                // BottomSheetWithFAB()
             }
         }
     }
