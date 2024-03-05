@@ -19,8 +19,14 @@ fun NavGraphBuilder.mainNavGraph(navController: NavController) {
 
         composable(NavigationRoute.ComponentRoute.route){
            // TextFieldHomeScreen(navController)
+            BottomSheetScreen(navController)
+
+        }
+        composable(NavigationRoute.ComponentRoute.route){
+           // TextFieldHomeScreen(navController)
            // BottomSheetScreen(navController)
             BottomNavigationScreen()
+
 
         }
 

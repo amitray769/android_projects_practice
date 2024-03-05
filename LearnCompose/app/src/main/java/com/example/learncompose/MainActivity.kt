@@ -5,6 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.material3.Text
 import androidx.compose.runtime.*
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
@@ -16,29 +17,27 @@ import com.example.learncompose.ui.bottomsheet.BottomSheetWithFAB
 import com.example.learncompose.ui.theme.LearnComposeTheme
 
 class MainActivity : ComponentActivity() {
-    private lateinit var navController: NavHostController
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
             LearnComposeTheme {
-
-             /*    NavHost(
+                val navController = rememberNavController()
+                NavHost(
                     navController = navController,
-                    startDestination = NavigationRoute.HomeRoute.route) {
+                    startDestination = NavigationRoute.HomeRoute.route
+                ) {
                     mainNavGraph(navController)
-                }*/
+                }
 //                MainScreen()
-                BottomSheetWithFAB()
+                // BottomSheetWithFAB()
             }
         }
     }
 }
 
 
-
-
-class FakeViewModel(){
+class FakeViewModel() {
     val deeplink = mutableStateOf(false)
 }
 
