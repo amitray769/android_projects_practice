@@ -16,7 +16,8 @@ fun NavGraphBuilder.mainNavGraph(navController: NavController) {
         route = NavigationRoute.HomeRoute.route
     ) {
         composable(NavigationRoute.HomeRoute.HomeL1Route.route) {
-            HomeScreen(navController)
+           // HomeScreen(navController)
+            BottomNavigationScreen()
         }
 
         composable(NavigationRoute.ComponentRoute.route) {
