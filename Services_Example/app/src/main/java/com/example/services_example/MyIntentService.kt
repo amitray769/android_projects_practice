@@ -1,10 +1,12 @@
 package com.example.services_example
 
 import android.app.IntentService
+import android.app.job.JobScheduler
 import android.content.Intent
 import android.util.Log
+import androidx.core.app.JobIntentService
 
-class MyIntentService : IntentService("MyIntentService") {
+class MyIntentService : JobScheduler("MyIntentService") {
 
     override fun onHandleIntent(intent: Intent?) {
         // This method is called on a background thread when an Intent is received.

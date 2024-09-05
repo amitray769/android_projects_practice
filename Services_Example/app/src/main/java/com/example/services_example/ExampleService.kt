@@ -31,7 +31,7 @@ class ExampleService() : Service() {
         val currentThread = Thread.currentThread()
         Log.d("Service_Example", "Thread Name: ${currentThread.name}")
        // Log.d("Service_Example","${currentThread}")
-        return  START_STICKY
+        return  START_NOT_STICKY
     }
 
     override fun onDestroy() {
