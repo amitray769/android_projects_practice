@@ -8,5 +8,7 @@ class Constants {
 
         //Sub Routes
         const val TEXT_FIELD_ROUTE = "textfield"
+        const val BOTTOM_NAVIGATION_ROUTE = "bottom_navigation"
+        const val LAZY_COLUMN_ROUTE = "lazy_column"
     }
 }
