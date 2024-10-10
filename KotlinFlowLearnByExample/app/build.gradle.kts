@@ -62,5 +62,6 @@ dependencies {
     implementation(libs.retrofit.gson.converter)
     implementation(libs.coroutine.core)
     implementation(libs.coroutine.android)
+    implementation(libs.compose.navigation)
 
 }
