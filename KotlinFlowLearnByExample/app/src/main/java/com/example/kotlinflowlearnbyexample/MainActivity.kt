@@ -27,7 +27,7 @@ class MainActivity : ComponentActivity() {
                     navController = navController,
                     startDestination = "home"
                 ) {
-                    mainNavGraph()
+                    mainNavGraph(navController)
                 }
             }
         }

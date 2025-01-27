@@ -1,5 +1,6 @@
 package com.example.blankproject.ui.viewmodels
 
+import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.paging.Pager
@@ -16,6 +17,8 @@ class PlanetDetailsScreenViewModel : ViewModel() {
 
     private val _planetDetails = MutableStateFlow(emptyList<Result>())
     val planetDetails: StateFlow<List<Result>> = _planetDetails
+
+    val state = mutableStateOf("amit")
 
     val planetPagingFlow = Pager(PagingConfig(pageSize = PAGE_SIZE)) {
         PlanetPagingSource(ApiClient.apiService)

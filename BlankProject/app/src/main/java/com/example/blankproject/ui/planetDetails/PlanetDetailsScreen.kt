@@ -25,6 +25,7 @@ import com.example.blankproject.ui.viewmodels.PlanetDetailsScreenViewModel
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun PlanetDetailsScreen(navController: NavController, planetUrl: String?, planetDetailsScreenViewModel: PlanetDetailsScreenViewModel = viewModel()) {
+    val state = planetDetailsScreenViewModel.state
 
     LaunchedEffect(Unit) {
         planetDetailsScreenViewModel.getPlanetDetailsByPage(planetUrl!!)
@@ -41,6 +42,8 @@ fun PlanetDetailsScreen(navController: NavController, planetUrl: String?, planet
                         }) {
                             Icon(imageVector = Icons.Default.ArrowBack, contentDescription = "Back")
                         }
+
+                        PlanetDetailsItem(state)
                     }
                 )
             },
